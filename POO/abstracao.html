@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abstraction</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: grey;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    .nav {
+      background-color: #444;
+      padding: 1em;
+      text-align: center;
+    }
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-item {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+    .section {
+      background-color: #383838;
+      padding: 1em;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 1000px;
+    }
+    .sub_title{
+      font-size: 18px;
+      color: blueviolet;
+      text-align:center;
+    }
+    .subtitle {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: blueviolet;
+    }
+    .title {
+      font-size: 30px;
+      color: blueviolet;
+    }
+    .text {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    img {
+      margin: auto;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+    pre{
+      color: white;
+      margin-left:280px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="navegacao.html" class="nav-link">Back to Navigation</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <h1 class="title">Abstração em POO: Desvendando o Poder da Simplicidade</h1>
+      <p class="text">A abstração é um dos pilares da Programação Orientada a Objetos (POO) e, como um bom mágico, esconde a complexidade por trás de uma interface simples e elegante. Vamos desvendar seus segredos!</p>
+      <h2 class="subtitle">🎩 Definição:</h2>
+      <p class="text">Em termos simples, a abstração em POO é como usar um smartphone sem precisar entender de eletrônica. Você interage com a tela, os aplicativos e as funções, sem se preocupar com os milhares de componentes e linhas de código por trás.
+      No código, a abstração permite representar entidades do mundo real (como um carro, uma conta bancária ou um usuário) focando apenas em seus aspectos essenciais, ocultando os detalhes internos complexos e irrelevantes para quem usa a funcionalidade.</p>
+      </section>
+      <section class="section">
+      <h2 class="subtitle">✨ Características:</h2>
+      <p class="text">Encapsulamento: Esconde os detalhes internos de um objeto, expondo apenas uma interface para interação. Pense em um controle remoto: você só vê os botões, não os circuitos.</p>
+      <p class="text">Generalização: Define um modelo genérico (classe abstrata ou interface) que pode ser especializado por múltiplas classes concretas. Imagine uma classe "Animal" com a ação "emitirSom()", e cada animal a implementa à sua maneira.</p>
+      <p class="text">Polimorfismo: Permite que objetos de diferentes classes sejam tratados de forma uniforme através de uma interface comum. É como usar o mesmo carregador para diferentes modelos de celular.</p>
+      </section>
+      <section class="section">
+      <h2 class="subtitle">🤔 Por Que Usar Abstração?</h2>
+      <p class="text">Imagine um carro sem painel. Você teria que mexer em fios e engrenagens para controlar tudo! A abstração simplifica a vida do programador (e a do código!) de várias maneiras:</p>
+      <p class="text">Organização: Divide o código em partes menores e mais gerenciáveis.</p>
+      <p class="text">Reutilização: Classes abstratas e interfaces promovem a reutilização de código.</p>
+      <p class="text">Manutenção: Facilita a manutenção e atualização do código.</p>
+      <p class="text">Flexibilidade: Permite adicionar novas funcionalidades com mais facilidade.</p>
+      <p class="text">Trabalho em equipe: Diferentes pessoas podem trabalhar em partes diferentes do código de forma independente.</p>
+      </section>
+      <section class="section">
+      <h2 class="subtitle">🎉 Vantagens:</h2>
+      <p class="text">Código mais limpo e legível: foco na funcionalidade, não na implementação.</p>
+      <p class="text">Menos erros: detalhes complexos ficam escondidos, diminuindo chances de falhas.</p>
+      <p class="text">Facilidade de manutenção e atualização: modificações ficam restritas a um único local.</p>
+      <p class="text">Código mais reutilizável: classes abstratas e interfaces promovem a reutilização.</p>
+      <p class="text">Aumento da produtividade: desenvolvimento mais rápido e eficiente.</p>
+      </section>
+      <section class="section">
+      <h2 class="subtitle">🚧 Desvantagens:</h2>
+      <p class="text">Curva de aprendizado: exige um entendimento sólido dos conceitos de POO.</p>
+      <p class="text">Complexidade inicial: pode parecer mais complicado no início, mas compensa a longo prazo.</p>
+      <p class="text">Nem sempre é a melhor solução: em casos muito simples, a abstração pode ser um exagero.</p>
+    </section>
+      <section class="section">
+        <h2 class="subtitle">Exemplo:</h2>
+        <h3 class="sub_title">Definindo o Contrato: Interface ContaBancaria</h3>
+        <img src="codes/code.png">
+        <p class="text">Começamos definindo uma interface chamada ContaBancaria. Pense nela como um contrato que diz: "se você quer ser uma conta bancária, precisa saber como sacar dinheiro".</p>
+        <p class="text">A interface define o método sacar(double valor), mas não diz como esse saque será feito. Isso fica a cargo das classes que implementarem a interface.</p>
+        <hr>
+        <h3 class="sub_title">Modelo Base: Classe Abstrata Conta</h3>
+        <img  width="470px" src="codes/code02.png">
+        <p class="text">A classe Conta, marcada como abstract, implementa a interface ContaBancaria, mostrando que ela representa uma conta bancária "genérica".</p>
+<p class="text">Ela possui um atributo saldo para guardar o saldo da conta, um construtor para inicializar o saldo, e métodos como depositar e getSaldo que são comuns a qualquer tipo de conta.</p>
+<p class="text">Repare que o método sacar também está presente, mas com a palavra-chave abstract. Isso significa que essa classe abstrata não define como o saque será realizado, apenas obriga suas classes filhas (que herdam dela) a implementarem esse método.</p>
+<hr>
+<img src="codes/code04.png" >
+
+<p class="text">A classe ContaCorrente estende (herda) a classe Conta e finalmente implementa o método sacar.</p>
+<p class="text">Note que a implementação do sacar em ContaCorrente é específica para esse tipo de conta: verifica se há saldo suficiente antes de realizar o saque.</p>
+
+
+<!-- Super é uma palavra-chave em Java que se refere à classe pai (ou superclasse) de uma classe. Quando você usa super em uma classe, você está se referindo à classe pai daquela classe.
+
+Em outras palavras, super é uma forma de acessar os membros (atributos e métodos) da classe pai a partir de uma classe filha (ou subclasse).
+
+Se você tentar sobrescrever um método sem usar @Override, o compilador não irá reclamar. No entanto, se você usar @Override e o método não estiver sendo sobrescrito corretamente, o compilador irá gerar um erro. -->
+      </section>
+  </main>
+</body>
+</html>

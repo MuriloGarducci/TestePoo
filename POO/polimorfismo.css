@@ -1,0 +1,76 @@
+body {
+    background-color: #fff; /* white background */
+  }
+  
+  .header {
+    background-color: #333; /* dark gray background */
+    color: #fff; /* white text */
+  }
+  
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .active {
+    background-color: #444; /* darker gray background */
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .section {
+    background-color: #f7f7f7; /* light gray background */
+    padding: 20px;
+    border: 1px solid #ddd; /* light gray border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .example {
+    background-color: #fff; /* white background */
+    padding: 20px;
+    border: 1px solid #ccc; /* light gray border */
+    border-radius: 10px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .code {
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc; /* light gray border */
+    border-radius: 10px;
+  }

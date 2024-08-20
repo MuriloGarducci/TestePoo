@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Profissional</title>
+    <style>
+
+        @font-face {
+            font-family: "mine";
+            src: url(../minecraft/Minecraft.ttf);
+        }
+        /* Definição de variáveis de cores */
+        :root {
+            /* 
+            
+
+            */
+            --primary-color: #192736;
+            --secondary-color: #134ba0;
+            --background-color: #555;
+            --h-color: #4f7fd1;
+            --code-color: #000000;
+            --hover-color: #ccc;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --transition-duration: 0.2s;
+            --bg-color: #f68d2c;
+            --span_code: rgb(23, 124, 255);
+            --span_code_num: rgb(242, 255, 2);
+            --text-color: #c8c5c5;
+        }
+        
+        /* Estilos globais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            text-align: justify!important;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        .section {            
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+        }
+        
+        /* Estilos para a barra de navegação superior */
+       .nav-superior {
+            background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            padding: 1em;
+            text-align: center;
+        }
+       .nav-superior ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+       .nav-superior li {
+            margin-right: 20px;
+        }
+       .nav-superior a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color var(--transition-duration);
+        }
+       .nav-superior a:hover {
+            color: var(--hover-color);
+        }
+       .nav-superior.separador {
+            margin: 0 10px;
+            color: var(--text-color);
+        }
+        
+        /* Estilos para a barra de navegação inferior */
+       .nav-inferior {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+            padding: 1em;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+            transition: background-color var(--transition-duration);
+        }
+       .nav-inferior ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+       .nav-inferior li {
+            margin-right: 20px;
+        }
+       .nav-inferior a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color var(--transition-duration);
+        }
+       .nav-inferior a:hover {
+            color: var(--hover-color);
+        }
+        
+        /* Estilos para o main */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            margin-top: 60px; /* espaço para a barra de navegação superior */
+            margin-bottom: 40px; /* espaço para a barra de navegação inferior */
+        }
+        pre{
+            background-color: var(--code-color)!important;
+            color: var(--bg-color)!important;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            width: 460px;
+            margin-left: 0%;
+        }
+        .str{
+            color: var(--span_code)!important;
+        }
+        .num {
+            color: var(--span_code_num)!important;
+        }
+        .coment {
+            color: rgb(13, 189, 13)!important;
+        }
+        h3 {text-align: center;color: var(--h-color);font-size: 2em;}
+        h1 {text-align: center;color: var(--h-color);font-size: 3.1em;}
+        p {text-align: center;}
+        u {text-align:center;}
+        li {text-align: center;justify-content: center;}
+    </style>
+</head>
+<body>
+    <nav class="nav-superior">
+        <ul>
+            <li><a href="#">PHP</a></li>
+            <li class="separador">|</li>
+            <li><a  style="color: rgba(255, 0, 0, 0.686);" href="#">Java</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section"></section>
+       <h1>Sintaxe e Fundamentos em Java</h1>
+       <p><u>Nesta seção, vamos abordar os conceitos básicos da linguagem Java, incluindo variáveis, tipos de dados, operadores, estruturas de controle, funções e mais</u></p>
+       <br>
+        <h3>Variáveis em Java</h3><br><br>
+        <ul>
+            <li><b>Variável Local: </b>
+            <p>São declaradas dentro de um método ou bloco de código.</p>
+                <p>São criadas quando o método é chamado e destruídas quando o método ou bloco é concluído.</p>
+                <p>Podem ser acessadas apenas dentro do método.</p>
+                <p>Não têm valor padrão e devem ser inicializadas antes de serem usadas.</p></li>
+                <hr><br>
+                <li><b>Variáveis de instância:</b></li>
+                <p>São declaradas dentro de uma classe, mas fora de qualquer método ou bloco.</p>
+                <p>São criadas quando um objeto da classe é instanciado e destruídas quando o objeto é coletado pelo lixo.</p>
+                <p>Podem ser acessadas por qualquer método da classe.</p>
+                <p>Têm valor padrão (0 para números, false para booleanos, null para objetos, etc.) se não forem inicializadas explicitamente.</p>
+                </li><hr><br>
+
+            <li><b>Variáveis Estáticas: </b>
+            <p>São declaradas com a palavra-chave static dentro de uma classe.</p>
+                <p>São criadas quando a classe é carregada e destruídas quando a classe é descarregada.</p>
+                <p>Podem ser acessadas por qualquer método da classe, sem a necessidade de criar um objeto da classe.</p>
+                <p>Têm valor padrão (0 para números, false para booleanos, null para objetos, etc.) se não forem inicializadas explicitamente.</p><br>
+            
+        </ul>
+    
+            <pre>
+<span class="coment">// Variável local</span>
+public class <span class="str">Exemplo</span> {
+    public static void main(<span class="str">String</span>[] args) {
+        int x = <span class="num">10</span>; <span class="coment">// Variável local</span>
+        System.out.println(x);
+    }
+}
+
+<span class="coment">// Variável de instância</span>
+public class <span class="str">Exemplo</span> {
+    int x = <span class="num"> 10</span>;  <span class="coment">//Variável de instância</span>
+
+    public static void main(<span class="str">String</span>[] args) {
+        Exemplo exemplo = <span class="str">new Exemplo</span>();
+        System.out.println(exemplo.x);
+    }
+}
+
+<span class="coment">// Variável estática</span>
+public class <span class="str">Exemplo</span> {
+    static int x = <span class="num"> 10</span>; <span class="coment">// Variável estática</span>
+
+    public static void main(<span class="str">String</span>[] args) {
+        System.out.println(Exemplo.x);
+    }
+}
+            </pre>
+        <hr><br><br>
+        <h3>Tipos de Dados em Java</h3>
+        <u>Java é uma linguagem estaticamente tipada, o que significa que o tipo de dado de uma variável é conhecido em tempo de compilação. Os principais tipos de dados em Java são:</u>
+        <ul><hr><br>
+            <li><b>Primitivos:</b> 
+            <p><b>Inteiros:</b> 'Byte', 'Short', 'Int', 'Long'</p>
+            <p><b>Ponto flutuante:</b> 'Float' , 'Double'</p>
+            <p><b>Booleano: </b> 'Boolean' </p>
+            <p><b>Caractere:</b> 'char' </p>
+            <p><b>Referência:</b> 'String', 'Array', 'Classe', 'Interfaces'</p></li>
+            <br><hr>
+        </ul>
+            <pre>
+        
+<span class="coment">// inteiro</span>
+int x = 10;
+
+<span class="coment">// ponto flutuante</span>
+float y = 10.5;
+
+<span class="coment">// booleano</span>
+booelan w = true;
+
+<span class="coment">// caractere</span>
+char z = "A";
+
+<span class="coment">// Referência</span>
+String nome = "Fêmea";
+            </pre>
+            
+        
+       </section>
+       <section class="section">
+        <h3>Operadores em Java</h3>
+        <u>Os operadores em Java são usados para realizar operações aritméticas, de comparação, lógicas, de atribuição, etc. Os principais operadores em Java são:</u>
+        <br><br>
+            <b>Operadores aritméticos:</b>
+            <p> + (adicão), - (subtração), * (multiplicação), / (divisão), % (resto da divisão)</p>
+            <p>Operadores aritméticos em Java podem ser usados em variáveis de instância ou de classe.</p>
+            <b>Comparação:</b>
+            <p> == (igual a), != (diferente de), &lt; (menor que), &lt;= (menor ou igual a), &gt; (maior que), &gt;= (maior ou igual a)</p>
+            <p>Operadores de comparação em Java podem ser usados em variáveis de instância ou de classe.</p>
+            <b>Lógicos:</b>
+            <p> && (e), || (ou), ! (não)</p>
+            <p>Operadores lógicos em Java podem ser usados em variáveis de instância ou de classe.</p>
+            <b>Atribuição:</b>
+            <p> = (atribuição), += (adiciona), -= (subtrai), *= (multiplica), /= (divide), %= (resto da divisão)</p>
+            <p>Operadores de atribuição em Java podem ser usados em variáveis de instância ou de classe.</p>
+
+            <br><br>
+            <pre>
+
+<span class="coment">// Aritméticos</span>
+int x = 10;
+int y = 5;
+int soma = x + y;
+System.out.println(soma);
+
+<span class="coment">// Comparação</span>
+int x = 10;
+int y = 5;
+boolean igual = x == y;
+System.out.println(igual);
+
+<span class="coment">// Lógicos</span>
+boolean x = true;
+boolean y = false;
+boolean e = x && y;
+System.out.println(e);
+
+<span class="coment">// Atribuição</span>
+int x = 10;
+x += 5;
+System.out.println(x); 
+            </pre>
+        </li>
+       </section>
+       <section class="section">
+       <h1>Estruturas de Controle em Java</h1>
+       
+        <h3>IF-ELSE</h3>
+        <u>Usada para tomar decisões com base em condições</u>
+        <pre>
+<span class="coment">// If-else</span>
+int x = <span class="num">    10</span>;
+if (x > <span class="num"> 5</span>) {
+    System.out.println("x é maior que <span class="num">5</span> ");
+} else {
+    System.out.println("x é menor ou igual à <span class="num">10</span> ");
+}
+        </pre>
+        <h3>FOR</h3>
+        <p>O laço for é usado para executar um bloco de código repetidamente por um número determinado de vezes.</p>
+        <pre>
+<span class="coment">// For</span>
+for (int x = <span class="num">0</span>; x <span class="num">10</span>; x++) {
+    System.out.println(x);
+}
+        </pre>
+        <h3>WHILE</h3>
+        <p>O laço while é usado para executar um bloco de código enquanto uma condição for verdadeira.</p>
+        <pre>
+<span class="coment">// While</span>
+int x = <span class="num">0</span>;
+while (x &lt; <span class="num">10</span>) {
+    System.out.println(x);
+    x++;
+}
+        </pre>
+        <h3>DO-WHILE</h3>
+        <p>O laço do-while é usado para executar um bloco de código enquanto uma condição for verdadeira. A diferença entre o while e o do-while é que o do-while executa o bloco de código pelo menos uma vez antes de verificar a condição.</p>
+        <pre>
+<span class="coment">// Do-while</span>
+int x = <span class="num">0</span>;
+do {
+    System.out.println(x);
+    x++;
+} while (x &lt; <span class="num">10</span>);
+        </pre>
+        <h3>Funções</h3>
+        <p>As funções em Java são blocos de código que podem ser chamados várias vezes a partir de diferentes partes do programa. As funções podem receber parâmetros e retornar valores.</p>
+        <pre>
+<span class="coment">// Função</span>
+int soma(int x, int y) {
+    return x + y;
+}
+
+int resultado = soma(<span class="num">10</span>, <span class="num">5</span>);
+        </pre>
+        <h3>Parâmetros e Retorno de Funções</h3>
+        <p>As funções em Java podem receber parâmetros e retornar valores. Os parâmetros são valores que são passados para a função quando ela é chamada, e o retorno é o valor que a função devolve ao final de sua execução.</p>
+        <h3>Sobrecarga de Funções</h3>
+        <p>A sobrecarga de funções em Java é a capacidade de criar várias funções com o mesmo nome, mas com parâmetros diferentes. Isso permite que as funções sejam mais flexíveis e possam ser usadas em diferentes contextos.</p>
+        <pre>
+<span class="coment">// Sobrecarga de funções</span>
+public class Exemplo {
+    public static void main(String[] args) {
+        int resultado1 = soma(<span class="num">2</span>, <span class="num">3</span> );
+        System.out.println(resultado1);
+
+        int resultado2 = soma(<span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>);
+        System.out.println(resultado2);
+    }
+
+    public static int soma(int a, int b) {
+        return a + b;
+    }
+
+    public static int soma(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+        </pre>
+        <h3>Recursividade</h3>
+        <p>A recursividade em Java é a capacidade de uma função chamar a si mesma. Isso permite que as funções sejam mais concisas e possam ser usadas para resolver problemas complexos.</p>
+        <pre>
+<span class="coment">// Recursividade</span>
+public class Exemplo {
+    public static void main(String[] args) {
+        int resultado = fatorial(<span class="num">5</span>);
+        System.out.println(resultado);
+    }
+
+    public static int fatorial(int n) {
+        if (n == <span class="num">1</span>) {
+            return <span class="num">1</span>;
+        } else {
+            return n * fatorial(n - <span class="num">1</span>);
+        }
+    }
+}
+        </pre>
+
+       </section>
+       <section class="section">
+
+       </section>
+
+
+    </main>
+    <nav class="nav-inferior">
+        <ul>
+            <li><a href="#">por </a></li>
+            <li><a href="#">enquanto</a></li>
+            <li><a href="#">nada</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

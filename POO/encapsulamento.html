@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulation</title>
+  <link rel="stylesheet" href="styleSiteAprender.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="navegacao.html" class="nav-link">Back to Navigation</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <h1 class="title">Encapsulamento</h1>
+      <p class="subtitle">Definição:</p>
+      <p class="text">
+        O encapsulamento é um dos pilares da programação orientada a objetos que se refere ao ato de esconder a implementação interna de um objeto e fornecer uma interface pública para interagir com ele. Isso significa que os detalhes internos de como um objeto funciona são protegidos de outros objetos, e a única maneira de acessar ou modificar seus dados é através de métodos públicos definidos na sua interface.
+      </p>
+    </section>
+    <section class="section">
+      <h1 class="title">Por que usar encapsulamento?</h1>
+      <p class="subtitle">O encapsulamento oferece diversos benefícios:</p>
+      <ul class="text">
+        <li><b>Segurança dos dados:</b> Impede acesso direto aos dados internos de um objeto, protegendo-os de alterações acidentais ou intencionais.</li>
+<li><b>Flexibilidade:</b> Permite modificar a implementação interna de um objeto sem afetar outros objetos que o utilizam, desde que a interface pública seja mantida.</li>
+<li><b>Organização do código:</b> Divide o código em módulos independentes, tornando-o mais fácil de entender, manter e reutilizar.</li>
+<li><b>Reutilização:</b> Classes bem encapsuladas podem ser facilmente reutilizadas em diferentes partes do código ou em outros projetos.</li>
+      </ul>
+      </section>
+      <section class="section">
+      <h2 class="subtitle">Importância do encapsulamento</h2>
+      <p class="text">
+        O encapsulamento é crucial para o desenvolvimento de softwares robustos, flexíveis e fáceis de manter. Ele promove a reutilização de código, reduz o acoplamento entre diferentes partes do sistema e garante a integridade dos dados, contribuindo para um código mais limpo, organizado e menos propenso a erros.
+      </p>
+    </section>
+    <section class="section">
+      <h2 class="subtitle">Aplicações do encapsulamento</h2>
+      <p class="text">O encapsulamento é aplicado em diversos contextos da programação orientada a objetos, como:
+      </p>
+      <ul class="text">
+        <li><b>Definição de classes:</b> Escondendo os atributos de uma classe e definindo métodos de acesso (getters e setters) para interagir com eles de forma controlada.</li>
+        <li><b>Criação de APIs:</b> Definindo interfaces claras e concisas para que outros desenvolvedores possam usar suas classes sem precisar conhecer os detalhes internos</li>
+        <li><b>Implementação de padrões de projeto:</b> Diversos padrões de projeto, como o Singleton e o Factory, dependem do encapsulamento para funcionar corretamente.</li>
+      </ul>
+    </section>
+    <section class="section">
+      <img src="codes/code03.png">
+      <h2 class="title">Explicação do código:</h2>
+      <h3 class="subtitle"><b>Classe ContaBancaria:</b></h3>
+      <ul class="text">
+        <li>Possui o atributo privado <i>saldo</i></li>
+        <li>Define os métodos públicos <i>depositar</i>,<i>sacar</i> e <i>getSaldo</i>, que controlam o acesso ao atributo <i>saldo</i>.</li>
+      </ul>
+      <h3 class="subtitle" ><b>Classe Main:</b></h3>
+      <ul class="text">
+        <li>Cria um objeto <i>minhaConta</i> da classe <i>ContaBancaria</i></li>
+        <li>Interage com o objeto <i>minhaConta</i> utilizando apenas os métodos públicos fornecidos.</li>
+        <li>Não consegue acessar ou modificar diretamente o atributo <i>saldo</i>.</li>
+      </ul>
+    </section>
+    <section class="section">
+      <h2 class="subtitle">Vantagens do Encapsulamento</h2>
+      <ul class="text">
+        <li>Aumento da segurança dos dados.</li>
+        <li>Melhoria na legibilidade e manutenilidade do código.</li>
+        <li>Maior flexibilidade para modificações futuras.</li>
+        <li>Facilita a reutilização de código.</li>
+      </ul>
+      <h2 class="subtitle">Desvantagens do Encapsulamento</h2>
+      <ul class="text">
+        <li><b>Leve aumento na quantidade de código:</b> É necessário criar métodos de acesso (getters e setters) para os atributos privados.</li>
+        <li><b>Possibilidade de métodos desnecessários:</b> Se a lógica de acesso aos atributos for muito simples, os getters e setters podem ser redundantes.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
